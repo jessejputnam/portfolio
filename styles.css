@@ -1,0 +1,80 @@
+/* 
+  TABLE OF CONTENTS
+
+  # Fonts
+  # Formatting
+  # Header
+  # About Me
+  # Projects
+  # Footer
+*/
+
+/* ################### FONTS #################### */
+
+/* ################ FORMATTING ################## */
+hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #fffbf6;
+}
+
+/* ################## Header ################### */
+.hero__container {
+  /* height: 600px; */
+  /* height: 50vw; */
+  background-image: url("./images/personal/welcome_table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: clamp(300px, 50vw, 600px);
+}
+
+.title__container {
+  height: clamp(100px, 13vw, 180px);
+  position: relative;
+  top: -5vw;
+}
+
+@media only screen and (max-width: 650px) {
+  .title__container {
+    top: -50px;
+  }
+}
+
+.title__container h1,
+h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.35vw;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.title__container h1 {
+  margin-left: 20px;
+  font-size: clamp(34px, 5vw, 80px);
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.title__container h2 {
+  padding-left: 80px;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ################# ABOUT ME ################## */
+
+/* ################# PROJECTS ################### */
+
+/* ################## FOOTER ################### */
