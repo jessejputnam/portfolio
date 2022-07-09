@@ -7,6 +7,7 @@
   # About Me
   # Projects
   # Footer
+  # Action States
 */
 
 /* ################### FONTS #################### */
@@ -22,6 +23,7 @@ p,
 div,
 button {
   font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(32, 32, 32, 0.865);
 }
 
 /* ################ FORMATTING ################## */
@@ -29,21 +31,44 @@ button {
   box-sizing: border-box;
 }
 
-hr {
-  width: 90%;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  max-width: 1600px;
   margin: 0 auto;
+}
+
+hr {
+  width: 70%;
+  margin: 0 auto;
+  border-color: rgba(241, 241, 241, 0.125);
+  box-shadow: 0 0 3px 0px rgba(55, 55, 55, 0.353);
+  margin-bottom: 10px;
 }
 
 body {
   background-color: #fffbf6;
 }
 
+button {
+  background: none;
+  border: none;
+
+  transition: filter 1s;
+}
+
 /* ################## Header ################### */
+header {
+  width: 100vw;
+}
+
 .hero__container {
   background-image: url("./images/personal/welcome_table.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: clamp(300px, 50vw, 600px);
+  height: clamp(300px, 50vw, 700px);
   box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.609);
 }
 
@@ -76,7 +101,9 @@ h2 {
 }
 
 .title__container h2 {
+  color: rgb(117, 170, 244);
   padding-left: 80px;
+  text-shadow: 1px 1px 1px black;
 }
 
 /* The typing effect */
@@ -89,11 +116,49 @@ h2 {
   }
 }
 
+.socials__container {
+  position: relative;
+  left: 400px;
+  top: -50px;
+  width: 120px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.socials__container a {
+  display: inline-block;
+  transition: filter 1s;
+}
+
+@media only screen and (max-width: 650px) {
+  .socials__container {
+    left: 20px;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .socials__container {
+    left: 450px;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .socials__container {
+    left: 550px;
+  }
+}
+
+@media (hover: hover) {
+  .socials__container a:hover {
+    filter: hue-rotate(100deg);
+  }
+}
 /* ################# ABOUT ME ################## */
 .about-me__container {
-  margin: 0 10vw;
+  max-width: 1350px;
   display: flex;
   justify-content: space-between;
+  column-gap: clamp(5px, 5vw, 200px);
   flex-wrap: wrap;
 }
 
@@ -101,11 +166,13 @@ h2 {
   object-fit: cover;
   object-position: 70% 0;
   width: 30vw;
+  max-width: 480px;
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.582);
 }
 
 .about-me__container > div {
   width: 40vw;
+  max-width: 620px;
 }
 
 .about-me__container > div > p {
@@ -122,6 +189,7 @@ h2 {
     width: 80vw;
     height: 400px;
     object-position: 0 35%;
+    margin: 0 auto;
   }
 
   .about-me__container > div {
@@ -133,6 +201,31 @@ h2 {
   }
 }
 
+.skills__container {
+  width: 100%;
+  padding: 0 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  justify-content: space-around;
+}
+
+.skills__item__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.skills__item__container > p {
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+}
+
 /* ################# PROJECTS ################### */
 
 /* ################## FOOTER ################### */
+
+/* ############## ACTION STATES ################ */
+/* .removed {
+  display: none;
+} */
