@@ -28,15 +28,22 @@
         <h2 class="title__description">Frontend Developer</h2>
         <hr />
         <div class="socials__container">
-          <a href="https://github.com/jessejputnam" target="_blank"
+          <a
+            class="social__link"
+            href="https://github.com/jessejputnam"
+            target="_blank"
             ><img src="./images/icons/github.png"
           /></a>
           <a
+            class="social__link"
             href="https://www.linkedin.com/in/jesse-putnam-53830622a/"
             target="_blank"
             ><img src="./images/icons/linkedin.png"
           /></a>
-          <a href="https://twitter.com/jputnam1200" target="_blank"
+          <a
+            class="social__link"
+            href="https://twitter.com/jputnam1200"
+            target="_blank"
             ><img src="./images/icons/twitter.png"
           /></a>
         </div>
@@ -47,31 +54,33 @@
     <!-- end header -->
 
     <main>
-      <section class="about-me__container">
-        <img
-          class="about-me__img"
-          src="./images/personal/LRM-EXPORT-13387477400618-20181008-002051656.jpeg"
-        />
-        <div>
-          <h1>About Me</h1>
-          <p>
-            I’m an aspiring junior front-end developer transitioning careers. I
-            am self-driven and independent, learning to code on my own through
-            documentation, challenges, textbooks, online courses, and projects.
-            I am currently based in Western MA, but I’m looking to relocate and
-            willing to work remotely as well.
-          </p>
-          <p>
-            I love reading, critical analysis, and, as a former public school
-            Language Arts teacher, have a great respect and dedication to
-            keeping a growth mindset and being a life-long learner in an
-            infinitely interesting world.
-          </p>
-          <p>
-            When I am not coding, I am often found playing and recording music
-            with guitar, mandolin, and/or accordion — unless, of course, I'm off
-            hiking with my dog, Luna.
-          </p>
+      <section class="about-me__wrapper">
+        <h1>⌟ About Me ⌞</h1>
+        <div class="about-me__container">
+          <img
+            class="about-me__img"
+            src="./images/personal/LRM-EXPORT-13387477400618-20181008-002051656.jpeg"
+          />
+          <div>
+            <p>
+              I’m an aspiring junior front-end developer transitioning careers.
+              I am self-driven and independent, learning to code on my own
+              through documentation, challenges, textbooks, online courses, and
+              projects. I am currently based in Western MA, but I’m looking to
+              relocate and willing to work remotely as well.
+            </p>
+            <p>
+              I love reading, critical analysis, and, as a former public school
+              Language Arts teacher, have a great respect and dedication to
+              keeping a growth mindset and being a life-long learner in an
+              infinitely interesting world.
+            </p>
+            <p>
+              When I am not coding, I am often found playing and recording music
+              with guitar, mandolin, and/or accordion — unless, of course, I'm
+              off hiking with my dog, Luna.
+            </p>
+          </div>
         </div>
       </section>
       <!-- end about-me__container -->
@@ -105,14 +114,38 @@
       <hr />
 
       <section class="projects__section__container">
-        <h1>Projects</h1>
+        <h1 class="projects__title">⌟ Projects ⌞</h1>
         <div class="projects__container">
-          <div class="project"></div>
-          <div class="project"></div>
-          <div class="project"></div>
-          <div class="project"></div>
-          <div class="project"></div>
-          <div class="project"></div>
+          <div class="project">
+            <div class="project__img">
+              <img src="./images/portfolio/weather-app.png" alt="Weather App" />
+            </div>
+            <div class="project__desc">
+              <h2>Weather or Not</h2>
+              <p>
+                A responsive application that uses API calls to display local
+                weather data, as well as allowing the user to search for weather
+                data for any city in the world. I used webpack as a module
+                bundler. APIs were used for the weather data.
+              </p>
+              <div>
+                <a
+                  class="project__btns"
+                  href="https://github.com/jessejputnam/weather-app"
+                  target="_blank"
+                  ><img src="./images/icons/github.png" alt="Github link"
+                /></a>
+                <a
+                  class="project__btns"
+                  href="https://jessejputnam.github.io/weather-app/"
+                  target="_blank"
+                  ><img
+                    src="./images/icons/arrow_forward.svg"
+                    alt="Live site link"
+                /></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end projects__section__container -->

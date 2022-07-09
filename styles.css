@@ -23,12 +23,18 @@ p,
 div,
 button {
   font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgba(32, 32, 32, 0.865);
+  color: rgba(44, 44, 44, 0.865);
 }
 
 /* ################ FORMATTING ################## */
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: #fffbf6;
+
+  transition: background-color 1s, color 1s;
 }
 
 main {
@@ -48,8 +54,17 @@ hr {
   margin-bottom: 10px;
 }
 
-body {
-  background-color: #fffbf6;
+section {
+  width: 75vw;
+  max-width: 1250px;
+}
+
+section h1 {
+  align-self: flex-start;
+  color: #3d99e0bc;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.788);
+
+  transition: color 0.7s;
 }
 
 button {
@@ -90,7 +105,7 @@ h2 {
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.35vw;
-  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 2.5s steps(40, end);
 }
 
 .title__container h1 {
@@ -127,7 +142,7 @@ h2 {
 
 .socials__container a {
   display: inline-block;
-  transition: filter 1s;
+  transition: filter 0.5s;
 }
 
 @media only screen and (max-width: 650px) {
@@ -143,7 +158,7 @@ h2 {
 }
 
 @media only screen and (min-width: 2400px) {
-  .socials__container {
+  .social__link {
     left: 550px;
   }
 }
@@ -154,8 +169,13 @@ h2 {
   }
 }
 /* ################# ABOUT ME ################## */
+.about-me__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-me__container {
-  max-width: 1350px;
   display: flex;
   justify-content: space-between;
   column-gap: clamp(5px, 5vw, 200px);
@@ -222,6 +242,64 @@ h2 {
 }
 
 /* ################# PROJECTS ################### */
+/* .projects__section__container {
+} */
+
+.project {
+  position: relative;
+}
+
+.project__img > img {
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.473);
+}
+
+.project__desc {
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.654);
+  backdrop-filter: blur(4px);
+  padding: 15px;
+  border-radius: 10px;
+  position: absolute;
+  top: 15vw;
+  left: 15vw;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.473);
+}
+
+.project__desc > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+
+.project__btns {
+  transition: transform 1.5s;
+}
+
+@media (hover: hover) {
+  .project__btns:hover {
+    transform: rotatey(360deg);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .project__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project__desc {
+    width: 90%;
+    margin: 0 auto;
+    height: 90%;
+    position: relative;
+    left: 0;
+    top: -20px;
+  }
+}
 
 /* ################## FOOTER ################### */
 
