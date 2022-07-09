@@ -10,8 +10,25 @@
 */
 
 /* ################### FONTS #################### */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+}
+
+p,
+div,
+button {
+  font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* ################ FORMATTING ################## */
+* {
+  box-sizing: border-box;
+}
+
 hr {
   width: 90%;
   margin: 0 auto;
@@ -23,12 +40,11 @@ body {
 
 /* ################## Header ################### */
 .hero__container {
-  /* height: 600px; */
-  /* height: 50vw; */
   background-image: url("./images/personal/welcome_table.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: clamp(300px, 50vw, 600px);
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.609);
 }
 
 .title__container {
@@ -74,6 +90,48 @@ h2 {
 }
 
 /* ################# ABOUT ME ################## */
+.about-me__container {
+  margin: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-me__img {
+  object-fit: cover;
+  object-position: 70% 0;
+  width: 30vw;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.582);
+}
+
+.about-me__container > div {
+  width: 40vw;
+}
+
+.about-me__container > div > p {
+  margin: 20px;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-me__container {
+    flex-direction: column;
+  }
+
+  .about-me__img {
+    width: 80vw;
+    height: 400px;
+    object-position: 0 35%;
+  }
+
+  .about-me__container > div {
+    width: 80vw;
+  }
+
+  .about-me__container > div > p {
+    font-size: 1rem;
+  }
+}
 
 /* ################# PROJECTS ################### */
 
