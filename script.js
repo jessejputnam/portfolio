@@ -9,11 +9,11 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const intersecting = entry.isIntersecting;
-      background.style.backgroundColor = intersecting ? "#1a759f" : "#fffbf6";
+      background.style.backgroundColor = intersecting ? "#fe660147" : "#fffbf6";
       projectsTitle.style.color = intersecting ? "white" : "#3d99e0bc";
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.2 }
 );
 
 observer.observe(projectsSection);
