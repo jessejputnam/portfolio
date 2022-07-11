@@ -2,14 +2,16 @@
 
 // DOM Variables
 const background = document.querySelector("body");
+const socialsContainer = document.querySelector(".socials__container");
 const projectsSection = document.querySelector(".projects__section__container");
 const projectsTitle = document.querySelector(".projects__title");
 
+// Background Shift on Intersection Observer
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const intersecting = entry.isIntersecting;
-      background.style.backgroundColor = intersecting ? "#fe660147" : "#fffbf6";
+      background.style.backgroundColor = intersecting ? "#22345bb0" : "#fffbf6";
       projectsTitle.style.color = intersecting ? "white" : "#3d99e0bc";
     });
   },
@@ -18,17 +20,5 @@ const observer = new IntersectionObserver(
 
 observer.observe(projectsSection);
 
-// const projectsObserverOptions = {
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0.1
-// };
-
-// const handleIntersect = () => {
-//   background.classList.add("projectsVisible");
-// };
-
-// const observer = new IntersectionObserver(
-//   handleIntersect,
-//   projectsObserverOptions
-// );
+// Socials container appear on entry
+setTimeout(() => (socialsContainer.style.opacity = 1), 2000);
