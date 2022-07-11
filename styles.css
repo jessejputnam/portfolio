@@ -390,9 +390,16 @@ footer {
   column-gap: 10px;
 }
 
+.email__link {
+  color: rgb(0, 229, 229);
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+}
+
 .socials--footer {
   position: static;
   margin-bottom: 15px;
+  opacity: 1;
 }
 
 .socials--footer > a {
