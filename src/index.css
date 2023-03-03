@@ -10,6 +10,12 @@
   /* Universal Color Scheme */
   --text-shadow-dark: rgb(81, 80, 80);
   --text-shadow-light: rgb(207, 206, 206);
+  --transparent: rgba(255, 255, 255, 0);
+  --project-link: #2f6ed3;
+  --purple: #a63fb6e3;
+  --faded-blue: rgba(14, 137, 158, 0.3);
+  --pink: #ffcad4;
+  --mud: #6f5d62;
 
   /* Dark Color Scheme */
   --background-dark: rgb(33, 31, 45);
@@ -25,6 +31,10 @@
   padding: 0;
 
   box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
 }
 
 html,
@@ -47,4 +57,9 @@ h2 {
 h3 {
   font-size: 1.5rem;
   line-height: 1.1;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.05;
 }

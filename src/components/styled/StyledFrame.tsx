@@ -41,8 +41,8 @@ export const StyledFrame = styled.div<FrameProps>`
   width: 300px;
 
   position: absolute;
-  top: ${(props) => (props.position === "left" ? "20px" : "")};
-  bottom: ${(props) => (props.position === "left" ? "" : "20px")};
+  top: ${(props) => (props.position === "left" ? "50px" : "")};
+  bottom: ${(props) => (props.position === "left" ? "" : "10px")};
   left: ${(props) => (props.position === "left" ? "10px" : "")};
   right: ${(props) => (props.position === "left" ? "" : "10px")};
 
