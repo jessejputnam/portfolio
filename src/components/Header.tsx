@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 `;
 
 export default function Header() {

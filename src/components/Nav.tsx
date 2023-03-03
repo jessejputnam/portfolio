@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { PropsWithoutRef, PropsWithRef, useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../ThemeContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,11 +26,19 @@ const StyledNav = styled.nav`
         ? "var(--background-dark)"
         : "var(--background-light)"};
 
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.1s;
+    cursor: default;
   }
 
-  && a.light {
-    transform: rotate(180deg);
+  && a:hover {
+    color: ${(props) =>
+      props.theme === "light"
+        ? "var(--link-hover-light)"
+        : "var(--link-hover-dark)"};
+  }
+
+  && a.toggle:hover {
+    transform: rotateZ(180deg);
   }
 `;
 
@@ -43,23 +51,28 @@ export default function () {
 
   return (
     <StyledNav theme={theme}>
-      <a>
+      <a
+        className='link'
+        href='https://github.com/jessejputnam'
+        target='_blank'
+      >
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a>
+      <a className='link' target='_blank'>
         <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
       </a>
-      <a>
+      <a
+        className='link'
+        href='https://www.linkedin.com/in/jessejputnam/'
+        target='_blank'
+      >
         <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
       </a>
-      <a>
+      <a className='link' href='https://sisypheaninsights.com/' target='_blank'>
         <FontAwesomeIcon icon={faBlog}></FontAwesomeIcon>
       </a>
-      <a onClick={changeTheme}>
-        <FontAwesomeIcon
-          icon={faCircleHalfStroke}
-          className={theme}
-        ></FontAwesomeIcon>
+      <a className='toggle' onClick={changeTheme}>
+        <FontAwesomeIcon icon={faCircleHalfStroke}></FontAwesomeIcon>
       </a>
     </StyledNav>
   );

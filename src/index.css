@@ -10,15 +10,16 @@
   /* Universal Color Scheme */
   --text-shadow-dark: rgb(81, 80, 80);
   --text-shadow-light: rgb(207, 206, 206);
-  --frame-border: rgb(80, 145, 185);
 
   /* Dark Color Scheme */
   --background-dark: rgb(33, 31, 45);
   --color-dark: rgb(159, 171, 191);
+  --link-hover-dark: rgba(114, 166, 194, 0.864);
 
   /* Light Color Scheme */
   --background-light: rgb(159, 171, 191);
   --color-light: rgb(33, 31, 45);
+  --link-hover-light: rgba(71, 87, 95, 0.864);
 
   margin: 0;
   padding: 0;
