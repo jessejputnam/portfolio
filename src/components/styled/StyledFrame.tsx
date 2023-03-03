@@ -24,7 +24,9 @@ export const StyledFrame = styled.div<FrameProps>`
       ? `inset 3px var(--background-${
           props.theme === "dark" ? "light" : "dark"
         })`
-      : `inset 3px var(--background-dark)`};
+      : `inset 3px var(--background-${
+          props.theme === "dark" ? "dark" : "light"
+        })`};
 
   border-bottom: ${(props) =>
     props.position === "right"
@@ -39,10 +41,14 @@ export const StyledFrame = styled.div<FrameProps>`
   width: 300px;
 
   position: absolute;
-  top: ${(props) => (props.position === "left" ? "30px" : "")};
-  bottom: ${(props) => (props.position === "left" ? "" : "30px")};
+  top: ${(props) => (props.position === "left" ? "20px" : "")};
+  bottom: ${(props) => (props.position === "left" ? "" : "20px")};
   left: ${(props) => (props.position === "left" ? "10px" : "")};
   right: ${(props) => (props.position === "left" ? "" : "10px")};
 
   transition: all 0.3s;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;

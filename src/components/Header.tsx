@@ -8,6 +8,11 @@ const StyledHeader = styled.header`
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    /* align-items: ; */
+  }
 `;
 
 export default function Header() {

@@ -5,6 +5,7 @@ import Frame from "./components/Frame";
 import Header from "./components/Header";
 
 import { StyledApp } from "./components/styled/StyledApp";
+import { StyledMain } from "./components/styled/StyledMain";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -13,9 +14,11 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <StyledApp theme={theme}>
-        <Frame position='left' />
-        <Frame position='right' />
-        <Header />
+        <StyledMain>
+          <Frame position='left' />
+          <Frame position='right' />
+          <Header />
+        </StyledMain>
       </StyledApp>
     </ThemeContext.Provider>
   );

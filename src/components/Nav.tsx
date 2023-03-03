@@ -14,7 +14,20 @@ import {
 const StyledNav = styled.nav`
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  padding-bottom: 10px;
+  margin-bottom: -15px;
+
+  border-bottom: ${(props) => (props.theme === "dark" ? "out" : "in")}set 3px
+    var(--background-light);
+
+  @media only screen and (max-width: 600px) {
+    border-bottom: ${(props) => (props.theme === "dark" ? "out" : "in")}set 3px
+      ${(props) =>
+        props.theme === "dark"
+          ? "var(--background-light)"
+          : "var(--background-dark)"};
+  }
 
   && * {
     font-size: 2rem;
