@@ -1,20 +1,21 @@
 import { useState } from "react";
 import { ThemeContext } from "./ThemeContext";
 
-import { Frame } from "./components/Frame";
+import Frame from "./components/Frame";
+import Header from "./components/Header";
 
 import { StyledApp } from "./components/styled/StyledApp";
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <StyledApp theme={theme}>
         <Frame position='left' />
         <Frame position='right' />
-        <h1>Jesse Putnam</h1>
-        <h2>Web Developer</h2>
+        <Header />
       </StyledApp>
     </ThemeContext.Provider>
   );

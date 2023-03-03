@@ -1,3 +1,9 @@
 export interface FrameProps {
-  position: "left" | "right";
+  position: string;
 }
+export interface TitleCardProps {
+  theme: string;
+}
+// export interface ChangeThemeProps {
+//   newTheme: Function;
+// }

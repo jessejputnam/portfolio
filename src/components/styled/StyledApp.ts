@@ -8,6 +8,7 @@ export const StyledApp = styled("div")`
       : "var(--background-light)"};
   color: ${(props) =>
     props.theme === "dark" ? "var(--color-dark)" : "var(--color-light)"};
+
   height: 100%;
   width: 100%;
   padding: 25px;
