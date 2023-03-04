@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../ThemeContext";
+import { TitleCardProps } from "../types";
 
 import { StyledTitle } from "./styled/StyledTitle";
 

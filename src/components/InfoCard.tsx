@@ -26,7 +26,9 @@ const StyledCard = styled.div`
     color: var(--faded-blue);
     text-shadow: 0 0 1px
       ${(props) =>
-        props.theme === "light" ? "var(--purple)" : "var(--background-light)"};
+        props.theme === "light"
+          ? "var(--deep-purple)"
+          : "var(--background-light)"};
   }
 
   && .links {
@@ -40,10 +42,16 @@ const StyledCard = styled.div`
 
   && a {
     color: ${(props) =>
-      props.theme === "light" ? "var(--project-link)" : "var(--purple)"};
+      props.theme === "light" ? "var(--project-link)" : "var(--deep-purple)"};
     line-height: 0.5;
     font-size: 1.8rem;
     letter-spacing: 0.2ch;
+    transition: 0.3s;
+  }
+
+  && a:hover {
+    color: ${(props) =>
+      props.theme === "dark" ? "var(--project-link)" : "var(--deep-purple)"};
   }
 `;
 

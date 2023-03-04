@@ -3,7 +3,7 @@ export interface FrameProps {
 }
 
 export interface TitleCardProps {
-  theme: string;
+  getIdx: (idx: string) => void;
 }
 
 export interface CardProps {

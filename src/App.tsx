@@ -13,9 +13,9 @@ import DesktopNav from "./components/DesktopNav";
 
 const cards = [
   {
-    title: "About Me",
+    title: "Hello, there",
     description:
-      "I am a full stack web developer that loves exploring technology and building apps. I like my code readable, extensible, and performant.",
+      "I am a full stack web developer that loves exploring technology and building useful things. I used to teach high school students, and I also used to travel the US playing music. I've developed strong skills in communication, building teams, and working collaboratively to a common goal. I love learning new things and teaching others about them.",
     liveLink: null,
     codeLink: null
   },
@@ -88,7 +88,7 @@ const StyledMain = styled.main`
 function App() {
   const [theme, setTheme] = useState("dark");
   const [backData, setBackData] = useState(null);
-  const [frontData, setFrontData] = useState(cards[2]);
+  const [frontData, setFrontData] = useState(cards[0]);
   const [currentSide, setCurrentSide] = useState("front");
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 

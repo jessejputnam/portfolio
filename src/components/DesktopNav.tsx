@@ -10,7 +10,9 @@ const StyledNav = styled.ul`
     display: none;
   }
 
-  && h3 {
+  && div {
+    display: flex;
+    gap: 15px;
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(
       0.25turn,
@@ -30,7 +32,8 @@ const StyledNav = styled.ul`
     gap: 10px;
   }
 
-  && li {
+  && li,
+  .link {
     cursor: default;
     transition: letter-spacing 0.3s, margin-left 0.3s, color 0.3s;
   }
@@ -41,6 +44,11 @@ const StyledNav = styled.ul`
     color: #9f328de3;
   }
 
+  .link:hover {
+    letter-spacing: 0.15ch;
+    color: #9f328de3;
+  }
+
   && p {
     line-height: 0.9;
   }
@@ -48,33 +56,39 @@ const StyledNav = styled.ul`
 
 export default function DesktopNav({ getDetails }: DesktopNavProps) {
   function chooseCard(e: any) {
-    const idx = e.target.closest("li").id;
+    const idx = e.target.closest(".link").id;
     getDetails(idx);
   }
 
   return (
     <StyledNav>
-      <h3>Projects</h3>
+      <div>
+        <h3>Projects</h3>
+        <h3>|</h3>
+        <h3 id='0' onClick={chooseCard} className='link'>
+          About
+        </h3>
+      </div>
       <ul>
-        <li id='1' onClick={chooseCard}>
+        <li id='1' onClick={chooseCard} className='link'>
           <p>TCG Portfolio Builder</p>
         </li>
-        <li id='2' onClick={chooseCard}>
+        <li id='2' onClick={chooseCard} className='link'>
           <p>Public Sector Landing Page</p>
         </li>
-        <li id='3' onClick={chooseCard}>
+        <li id='3' onClick={chooseCard} className='link'>
           <p>Data Visualization</p>
         </li>
-        <li id='4' onClick={chooseCard}>
+        <li id='4' onClick={chooseCard} className='link'>
           <p>Weather or Not</p>
         </li>
-        <li id='5' onClick={chooseCard}>
+        <li id='5' onClick={chooseCard} className='link'>
           <p>Mock Storefront Inventory</p>
         </li>
-        <li id='6' onClick={chooseCard}>
+        <li id='6' onClick={chooseCard} className='link'>
           <p>le Word</p>
         </li>
-        <li id='7' onClick={chooseCard}>
+        <li id='7' onClick={chooseCard} className='link'>
           <p>Battleship</p>
         </li>
       </ul>
