@@ -38,15 +38,16 @@ const StyledNav = styled.ul`
     transition: letter-spacing 0.3s, margin-left 0.3s, color 0.3s;
   }
 
-  && li:hover {
-    letter-spacing: 0.15ch;
-    margin-left: -10px;
-    color: #9f328de3;
-  }
+  @media (hover: hover) {
+    && li:hover {
+      letter-spacing: 0.15ch;
+      margin-left: -10px;
+      color: #9f328de3;
+    }
 
-  .link:hover {
-    letter-spacing: 0.15ch;
-    color: #9f328de3;
+    .link:hover {
+      color: #9f328de3;
+    }
   }
 
   && p {

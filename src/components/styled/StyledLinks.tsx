@@ -54,26 +54,30 @@ export const StyledLinks = styled.div`
     -moz-transition: all 0.2s ease;
   }
 
-  && a:hover:after {
-    bottom: 100%;
-  }
-  && a:hover:after,
-  a:hover:before {
-    opacity: 1;
-  }
+  @media (hover: hover) {
+    && a:hover:after {
+      bottom: 100%;
+    }
+    && a:hover:after,
+    a:hover:before {
+      opacity: 1;
+    }
 
-  && a:hover {
-    color: ${(props) =>
-      props.theme === "light"
-        ? "var(--link-hover-light)"
-        : "var(--link-hover-dark)"};
+    && a:hover {
+      color: ${(props) =>
+        props.theme === "light"
+          ? "var(--link-hover-light)"
+          : "var(--link-hover-dark)"};
+    }
   }
 
   && a.toggle > * {
     transition: transform 0.3s;
   }
 
-  && a.toggle > *:hover {
-    transform: rotateZ(180deg);
+  @media (hover: hover) {
+    && a.toggle > *:hover {
+      transform: rotateZ(180deg);
+    }
   }
 `;

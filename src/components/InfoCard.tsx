@@ -49,9 +49,11 @@ const StyledCard = styled.div`
     transition: 0.3s;
   }
 
-  && a:hover {
-    color: ${(props) =>
-      props.theme === "dark" ? "var(--project-link)" : "var(--deep-purple)"};
+  @media (hover: hover) {
+    && a:hover {
+      color: ${(props) =>
+        props.theme === "dark" ? "var(--project-link)" : "var(--deep-purple)"};
+    }
   }
 `;
 
