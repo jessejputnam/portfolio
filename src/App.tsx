@@ -15,13 +15,19 @@ import { cards } from "./assets/cardsData";
 
 function App() {
   const [theme, setTheme] = useState("dark");
-  const [backData, setBackData] = useState(null);
   const [frontData, setFrontData] = useState(cards[0]);
+  const [backData, setBackData] = useState(cards[1]);
   const [currentSide, setCurrentSide] = useState("front");
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   function handleGetDetails(idx: string) {
-    setFrontData(cards[+idx]);
+    if (currentSide === "front") {
+      setBackData(cards[+idx]);
+      setCurrentSide("back");
+    } else {
+      setFrontData(cards[+idx]);
+      setCurrentSide("front");
+    }
   }
 
   return (
@@ -35,9 +41,13 @@ function App() {
 
           <StyledMain>
             <div>
-              {/* <InfoCard side='back' data={backData} /> */}
-              <InfoCard side='front' data={frontData} />
-              <MailForm />
+              <InfoCard side='back' currentSide={currentSide} data={backData} />
+              <InfoCard
+                side='front'
+                currentSide={currentSide}
+                data={frontData}
+              />
+              {/* <MailForm /> */}
             </div>
 
             <DesktopNav getDetails={handleGetDetails} />

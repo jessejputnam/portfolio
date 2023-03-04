@@ -1,11 +1,25 @@
 import styled from "styled-components";
 
-export const StyledCard = styled.div`
+import { StyledCardProps } from "../../types";
+
+export const StyledCard = styled.div<StyledCardProps>`
+  transition-property: opacity, transform;
+  transition-duration: 0s, 1s;
+  transition-delay: 0.5s, 0s;
+  transition-timing-function: linear, linear;
+  opacity: ${(props) => (props.side === props.currentSide ? "1" : "0")};
+  transform: ${(props) =>
+    props.side === props.currentSide
+      ? "rotate3d(0, 1, 0, 0deg)"
+      : "rotate3d(0, 1, 0, -180deg)"};
+
   max-width: 800px;
-  height: 350px;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  position: absolute;
 
   && h1 {
     line-height: 0.75;
@@ -66,7 +80,27 @@ export const StyledCard = styled.div`
     }
   }
 
+  @media only screen and (max-width: 900px) {
+    width: 50vw;
+
+    && h1 {
+      font-size: 2.3rem;
+    }
+
+    && .description {
+      font-size: 1.6rem;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
+    width: 100%;
+    position: relative;
+    align-items: center;
+
+    && .links {
+      padding-left: 0;
+    }
+
     && h1 {
       font-size: 2rem;
       text-align: center;

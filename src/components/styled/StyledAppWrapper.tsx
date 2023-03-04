@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledAppWrapper = styled.div`
   max-width: 1400px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   width: 100%;

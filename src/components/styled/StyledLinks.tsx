@@ -30,7 +30,7 @@ export const StyledLinks = styled.div`
         : "var(--background-light)"};
 
     transition: transform 0.3s, color 0.1s;
-    cursor: default;
+    cursor: pointer;
   }
 
   && a:after {

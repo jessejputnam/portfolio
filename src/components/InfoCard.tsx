@@ -5,11 +5,11 @@ import { CardProps } from "../types";
 
 import { StyledCard } from "./styled/StyledCard";
 
-export default function InfoCard({ side, data }: CardProps) {
+export default function InfoCard({ side, data, currentSide }: CardProps) {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <StyledCard theme={theme}>
+    <StyledCard theme={theme} side={side} currentSide={currentSide}>
       <h1>{data ? data.title : null}</h1>
 
       {!data?.liveLink ? null : (
