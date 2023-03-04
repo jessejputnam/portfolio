@@ -28,9 +28,7 @@ export default function () {
       >
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a data-tooltip='Contact' className='link' target='_blank'>
-        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-      </a>
+
       <a
         data-tooltip='LinkedIn'
         className='link'
@@ -39,6 +37,7 @@ export default function () {
       >
         <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
       </a>
+
       <a
         data-tooltip='Blog'
         className='link'
@@ -47,6 +46,11 @@ export default function () {
       >
         <FontAwesomeIcon icon={faBlog}></FontAwesomeIcon>
       </a>
+
+      <a data-tooltip='Contact' className='link' target='_blank'>
+        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+      </a>
+
       <a data-tooltip='Theme' className='toggle' onClick={changeTheme}>
         <FontAwesomeIcon icon={faCircleHalfStroke}></FontAwesomeIcon>
       </a>

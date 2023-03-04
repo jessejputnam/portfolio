@@ -3,59 +3,7 @@ import { ThemeContext } from "../ThemeContext";
 
 import { CardProps } from "../types";
 
-import styled from "styled-components";
-
-const StyledCard = styled.div`
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  && div {
-    display: flex;
-  }
-
-  && .stack {
-    gap: 10px;
-    justify-content: end;
-    font-variant: small-caps;
-  }
-
-  && .stack > p {
-    font-size: 1.3rem;
-    color: var(--faded-blue);
-    text-shadow: 0 0 1px
-      ${(props) =>
-        props.theme === "light"
-          ? "var(--deep-purple)"
-          : "var(--background-light)"};
-  }
-
-  && .links {
-    gap: 100px;
-    padding-left: 30px;
-  }
-
-  && .description {
-    margin: 15px 0;
-  }
-
-  && a {
-    color: ${(props) =>
-      props.theme === "light" ? "var(--project-link)" : "var(--deep-purple)"};
-    line-height: 0.5;
-    font-size: 1.8rem;
-    letter-spacing: 0.2ch;
-    transition: 0.3s;
-  }
-
-  @media (hover: hover) {
-    && a:hover {
-      color: ${(props) =>
-        props.theme === "dark" ? "var(--project-link)" : "var(--deep-purple)"};
-    }
-  }
-`;
+import { StyledCard } from "./styled/StyledCard";
 
 export default function InfoCard({ side, data }: CardProps) {
   const { theme } = useContext(ThemeContext);
