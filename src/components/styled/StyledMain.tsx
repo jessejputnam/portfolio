@@ -12,6 +12,6 @@ export const StyledMain = styled.main`
   }
 
   @media only screen and (max-width: 600px) {
-    padding: 20px 20px 10px;
+    padding: 20px 0 0;
   }
 `;

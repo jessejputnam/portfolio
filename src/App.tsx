@@ -22,9 +22,11 @@ function App() {
 
   function handleGetDetails(idx: string) {
     if (currentSide === "front") {
+      if (frontData.id == +idx) return;
       setBackData(cards[+idx]);
       setCurrentSide("back");
     } else {
+      if (backData.id == +idx) return;
       setFrontData(cards[+idx]);
       setCurrentSide("front");
     }

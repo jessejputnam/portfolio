@@ -3,15 +3,16 @@ import styled from "styled-components";
 import { StyledCardProps } from "../../types";
 
 export const StyledCard = styled.div<StyledCardProps>`
+  padding: 5px 10px;
   transition-property: opacity, transform;
   transition-duration: 0s, 1s;
   transition-delay: 0.5s, 0s;
-  transition-timing-function: linear, linear;
+  transition-timing-function: ease-in-out, ease-in-out;
   opacity: ${(props) => (props.side === props.currentSide ? "1" : "0")};
   transform: ${(props) =>
     props.side === props.currentSide
-      ? "rotate3d(0, 1, 0, 0deg)"
-      : "rotate3d(0, 1, 0, -180deg)"};
+      ? "rotate3d(0, 10, 0, 360deg)"
+      : "rotate3d(0, 10, 0, 180deg)"};
 
   max-width: 800px;
   width: 60vw;
@@ -38,7 +39,8 @@ export const StyledCard = styled.div<StyledCardProps>`
     border-top: solid 3px var(--faded-blue);
     padding-top: 5px;
     width: fit-content;
-    align-self: flex-end;
+    align-self: ${(props) =>
+      props.side === "front" ? "flex-end" : "flex-start"};
   }
 
   && .stack > p {
@@ -93,12 +95,17 @@ export const StyledCard = styled.div<StyledCardProps>`
   }
 
   @media only screen and (max-width: 600px) {
+    padding: none;
+    display: ${(props) =>
+      props.side === props.currentSide ? "block" : "none"};
+
     width: 100%;
     position: relative;
     align-items: center;
 
     && .links {
       padding-left: 0;
+      justify-content: center;
     }
 
     && h1 {
