@@ -9,12 +9,13 @@
 
   /* Universal Color Scheme */
   --text-shadow-dark: rgba(59, 59, 59, 0.698);
-  --text-shadow-light: rgb(207, 206, 206);
+  --text-shadow-light: #646b77ce;
   --transparent: rgba(255, 255, 255, 0);
   --project-link: #2f6ed3;
   --purple: #a63fb6e3;
   --deep-purple: #822d8fe3;
   --faded-blue: rgba(14, 137, 158, 0.3);
+  --button-blue: rgba(29, 167, 191, 0.518);
   --pink: #ffcad4;
   --mud: #6f5d62;
 

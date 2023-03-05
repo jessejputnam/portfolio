@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Context } from "./contexts";
 
 import Frame from "./components/Frame";
@@ -37,7 +37,12 @@ function App() {
 
   return (
     <Context.Provider
-      value={{ theme, toggleTheme, openModal, toggleOpenModal }}
+      value={{
+        theme,
+        toggleTheme,
+        openModal,
+        toggleOpenModal
+      }}
     >
       <StyledApp theme={theme}>
         <StyledAppWrapper>

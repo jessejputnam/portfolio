@@ -15,7 +15,7 @@ export const StyledLinks = styled.div`
       ${(props) =>
         props.theme === "dark"
           ? "var(--background-light)"
-          : "var(--background-dark)"};
+          : "var(--text-shadow-dark)"};
   }
 
   && * {
