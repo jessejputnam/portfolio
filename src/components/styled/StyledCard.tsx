@@ -4,11 +4,15 @@ import { StyledCardProps } from "../../types";
 
 export const StyledCard = styled.div<StyledCardProps>`
   padding: 5px 10px;
-  transition-property: opacity, transform;
-  transition-duration: 0s, 1s;
-  transition-delay: 0.5s, 0s;
-  transition-timing-function: ease-in-out, ease-in-out;
+  transition-property: opacity, transform, filter;
+  transition-duration: 0.5s, 1s, 0.5s;
+  transition-delay: ${(props) =>
+      props.side === props.currentSide ? ".2s" : "0s"},
+    0s, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear;
   opacity: ${(props) => (props.side === props.currentSide ? "1" : "0")};
+  filter: ${(props) =>
+    props.side !== props.currentSide ? "brightness(30%)" : "brightness(100%)"};
   transform: ${(props) =>
     props.side === props.currentSide
       ? "rotate3d(0, 10, 0, 360deg)"

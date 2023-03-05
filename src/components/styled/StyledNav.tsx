@@ -25,12 +25,13 @@ export const StyledNav = styled.ul`
     padding-bottom: 7px;
   }
 
-  && h3 {
+  && h3.projects {
     font-size: 1.9rem;
+    font-weight: 600;
   }
 
-  && h3.projects {
-    font-weight: 600;
+  && h3.link {
+    line-height: 1.4;
   }
 
   && ul {
@@ -42,7 +43,7 @@ export const StyledNav = styled.ul`
 
   && li {
     cursor: default;
-    transition: letter-spacing 0.3s, margin-left 0.3s, color 0.3s;
+    transition: margin-left 0.3s, color 0.3s;
   }
 
   && .link {
