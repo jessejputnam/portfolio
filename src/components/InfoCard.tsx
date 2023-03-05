@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { ThemeContext } from "../ThemeContext";
+import { Context } from "../contexts";
 
 import { CardProps } from "../types";
 
 import { StyledCard } from "./styled/StyledCard";
 
 export default function InfoCard({ side, data, currentSide }: CardProps) {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(Context);
 
   return (
     <StyledCard theme={theme} side={side} currentSide={currentSide}>

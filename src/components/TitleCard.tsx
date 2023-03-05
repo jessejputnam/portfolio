@@ -1,11 +1,10 @@
 import { useContext } from "react";
-import { ThemeContext } from "../ThemeContext";
-import { TitleCardProps } from "../types";
+import { Context } from "../contexts";
 
 import { StyledTitle } from "./styled/StyledTitle";
 
 export default function TitleCard() {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(Context);
 
   return (
     <StyledTitle theme={theme}>

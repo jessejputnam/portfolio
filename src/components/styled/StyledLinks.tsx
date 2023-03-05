@@ -80,4 +80,8 @@ export const StyledLinks = styled.div`
       transform: rotateZ(180deg);
     }
   }
+
+  && .contact {
+    z-index: 20;
+  }
 `;

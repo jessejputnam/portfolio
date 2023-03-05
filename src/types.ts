@@ -32,7 +32,7 @@ export interface DesktopNavProps {
   getDetails: (idx: string) => void;
 }
 
-export type CardDataState = [
-  CardData | null,
-  React.Dispatch<React.SetStateAction<CardData | null>>
-];
+export interface MailFormProps {
+  open: boolean;
+  theme: string;
+}

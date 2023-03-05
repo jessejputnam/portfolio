@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ThemeContext } from "./ThemeContext";
+import { Context } from "./contexts";
 
 import Frame from "./components/Frame";
 import Header from "./components/Header";
@@ -15,10 +15,13 @@ import { cards } from "./assets/cardsData";
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const [openModal, setOpenModal] = useState(false);
   const [frontData, setFrontData] = useState(cards[0]);
   const [backData, setBackData] = useState(cards[1]);
   const [currentSide, setCurrentSide] = useState("front");
+
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  const toggleOpenModal = () => setOpenModal(!openModal);
 
   function handleGetDetails(idx: string) {
     if (currentSide === "front") {
@@ -33,13 +36,16 @@ function App() {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <Context.Provider
+      value={{ theme, toggleTheme, openModal, toggleOpenModal }}
+    >
       <StyledApp theme={theme}>
         <StyledAppWrapper>
           <Frame position='left' />
           <Frame position='right' />
 
           <Header />
+          <MailForm />
 
           <StyledMain>
             <div>
@@ -49,14 +55,13 @@ function App() {
                 currentSide={currentSide}
                 data={frontData}
               />
-              {/* <MailForm /> */}
             </div>
 
             <DesktopNav getDetails={handleGetDetails} />
           </StyledMain>
         </StyledAppWrapper>
       </StyledApp>
-    </ThemeContext.Provider>
+    </Context.Provider>
   );
 }
 

@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { DesktopNavProps } from "../types";
 
 import { StyledNav } from "./styled/StyledNav";

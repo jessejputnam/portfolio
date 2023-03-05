@@ -8,7 +8,7 @@
   -webkit-text-size-adjust: 100%;
 
   /* Universal Color Scheme */
-  --text-shadow-dark: rgb(81, 80, 80);
+  --text-shadow-dark: rgba(59, 59, 59, 0.698);
   --text-shadow-light: rgb(207, 206, 206);
   --transparent: rgba(255, 255, 255, 0);
   --project-link: #2f6ed3;

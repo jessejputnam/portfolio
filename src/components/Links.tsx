@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../ThemeContext";
+import { Context } from "../contexts";
 
 import { StyledLinks } from "./styled/StyledLinks";
 
@@ -12,10 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function () {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme, openModal, toggleOpenModal } =
+    useContext(Context);
 
   function changeTheme() {
     toggleTheme();
+  }
+
+  function toggleModal() {
+    toggleOpenModal();
   }
 
   return (
@@ -47,8 +52,11 @@ export default function () {
         <FontAwesomeIcon icon={faBlog}></FontAwesomeIcon>
       </a>
 
-      <a data-tooltip='Contact' className='link' target='_blank'>
-        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+      <a data-tooltip='Contact' className='link contact' target='_blank'>
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          onClick={toggleModal}
+        ></FontAwesomeIcon>
       </a>
 
       <a data-tooltip='Theme' className='toggle' onClick={changeTheme}>
