@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "private": true,
-  "homepage": "https://jessejputnam.github.io/portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
