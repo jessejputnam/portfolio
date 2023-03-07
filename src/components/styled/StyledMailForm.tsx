@@ -10,7 +10,7 @@ export const StyledMailForm = styled.div<{ open: boolean; theme: string }>`
 
   display: flex;
   justify-content: center;
-  z-index: 5;
+  z-index: 10;
   width: 350px;
   height: ${(props) => (props.open ? "450px" : "0px")};
   box-shadow: ${(props) =>

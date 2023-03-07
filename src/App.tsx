@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import InfoCard from "./components/InfoCard";
 import MailForm from "./components/MailForm";
 import DesktopNav from "./components/DesktopNav";
+import MobileNav from "./components/MobileNav";
 
 import { StyledApp } from "./components/styled/StyledApp";
 import { StyledAppWrapper } from "./components/styled/StyledAppWrapper";
@@ -53,6 +54,8 @@ function App() {
           <MailForm />
 
           <StyledMain>
+            <MobileNav getDetails={handleGetDetails} />
+
             <div>
               <InfoCard side='back' currentSide={currentSide} data={backData} />
               <InfoCard

@@ -1,8 +1,8 @@
-import { DesktopNavProps } from "../types";
+import { NavProps } from "../types";
 
 import { StyledNav } from "./styled/StyledNav";
 
-export default function DesktopNav({ getDetails }: DesktopNavProps) {
+export default function DesktopNav({ getDetails }: NavProps) {
   function chooseCard(e: any) {
     const idx = e.target.closest(".link").id;
     getDetails(idx);

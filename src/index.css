@@ -21,11 +21,13 @@
 
   /* Dark Color Scheme */
   --background-dark: rgb(33, 31, 45);
+  --background-dark-mobile: rgb(52, 49, 70);
   --color-dark: rgb(159, 171, 191);
   --link-hover-dark: rgba(114, 166, 194, 0.864);
 
   /* Light Color Scheme */
   --background-light: rgb(159, 171, 191);
+  --background-light-mobile: rgb(117, 127, 145);
   --color-light: rgb(33, 31, 45);
   --link-hover-light: rgba(71, 87, 95, 0.864);
 

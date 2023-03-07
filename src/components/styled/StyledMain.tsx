@@ -15,5 +15,8 @@ export const StyledMain = styled.main`
 
   @media only screen and (max-width: 600px) {
     padding: 20px 0 0;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
   }
 `;

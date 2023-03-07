@@ -28,7 +28,7 @@ export interface CardData {
   codeLink?: string | null;
 }
 
-export interface DesktopNavProps {
+export interface NavProps {
   getDetails: (idx: string) => void;
 }
 

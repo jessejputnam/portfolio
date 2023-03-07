@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StyledCardProps } from "../../types";
 
 export const StyledCard = styled.div<StyledCardProps>`
+  z-index: ${(props) => (props.side === props.currentSide ? "5" : "4")};
   padding: 5px 10px;
   transition-property: opacity, transform, filter;
   transition-duration: 0.5s, 1s, 0.5s;
@@ -70,7 +71,7 @@ export const StyledCard = styled.div<StyledCardProps>`
 
   && a {
     color: ${(props) =>
-      props.theme === "light" ? "var(--project-link)" : "var(--deep-purple)"};
+      props.theme === "dark" ? "var(--project-link)" : "var(--deep-purple)"};
     line-height: 0.5;
     font-size: 1.8rem;
     letter-spacing: 0.2ch;
@@ -82,7 +83,7 @@ export const StyledCard = styled.div<StyledCardProps>`
   @media (hover: hover) {
     && a:hover {
       color: ${(props) =>
-        props.theme === "dark" ? "var(--project-link)" : "var(--deep-purple)"};
+        props.theme === "light" ? "var(--project-link)" : "var(--deep-purple)"};
     }
   }
 
@@ -100,11 +101,9 @@ export const StyledCard = styled.div<StyledCardProps>`
 
   @media only screen and (max-width: 600px) {
     padding: none;
-    display: ${(props) =>
-      props.side === props.currentSide ? "block" : "none"};
 
     width: 100%;
-    position: relative;
+    position: absolute;
     align-items: center;
 
     && .links {
