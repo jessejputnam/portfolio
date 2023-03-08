@@ -5,37 +5,33 @@ import { FrameProps } from "../../types";
 export const StyledFrame = styled.div<FrameProps>`
   border-left: ${(props) =>
     props.position === "left"
-      ? `outset 3px var(--background-light)`
-      : `outset 3px var(--background-${
-          props.theme === "dark" ? "dark" : "light"
-        })`};
+      ? `outset 3px var(${
+          props.theme === "light" ? "--transparent" : "--background-light"
+        })`
+      : `outset 3px var(--transparent)`};
 
   border-top: ${(props) =>
     props.position === "left"
-      ? `${
-          props.theme === "light" ? "out" : "in"
-        }set 3px var(--background-light)`
-      : `outset 3px var(--background-${
-          props.theme === "dark" ? "dark" : "light"
-        })`};
+      ? `inset 3px var(${
+          props.theme === "light" ? "--transparent" : "--background-light"
+        })`
+      : `outset 3px var(--transparent)`};
 
   border-right: ${(props) =>
     props.position === "right"
       ? `inset 3px var(--background-${
           props.theme === "dark" ? "light" : "dark"
         })`
-      : `inset 3px var(--background-${
-          props.theme === "dark" ? "dark" : "light"
-        })`};
+      : `inset 3px var(--transparent)`};
 
   border-bottom: ${(props) =>
     props.position === "right"
       ? `outset 3px var(--background-${
           props.theme === "dark" ? "light" : "dark"
         })`
-      : `${
-          props.theme === "light" ? "out" : "in"
-        }set 3px var(--background-dark)`};
+      : `outset 3px var(${
+          props.theme === "dark" ? "--transparent" : "--background-dark"
+        })`};
 
   height: 100px;
   width: 300px;
