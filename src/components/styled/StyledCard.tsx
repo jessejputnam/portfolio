@@ -3,14 +3,16 @@ import styled from "styled-components";
 import { StyledCardProps } from "../../types";
 
 export const StyledCard = styled.div<StyledCardProps>`
+  height: ${(props) => (props.isLoaded ? "600px" : "0")};
+  overflow-y: hidden;
   z-index: ${(props) => (props.side === props.currentSide ? "5" : "4")};
   padding: 5px 10px;
-  transition-property: opacity, transform, filter;
-  transition-duration: 0.5s, 1s, 0.5s;
+  transition-property: opacity, transform, filter, height;
+  transition-duration: 0.5s, 1s, 0.5s, 2s;
   transition-delay: ${(props) =>
       props.side === props.currentSide ? ".2s" : "0s"},
-    0s, 0s;
-  transition-timing-function: ease-in-out, ease-in-out, linear;
+    0s, 0s, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear, ease-in-out;
   opacity: ${(props) => (props.side === props.currentSide ? "1" : "0")};
   filter: ${(props) =>
     props.side !== props.currentSide ? "brightness(30%)" : "brightness(100%)"};
@@ -50,7 +52,8 @@ export const StyledCard = styled.div<StyledCardProps>`
 
   && .stack > p {
     font-size: 1.3rem;
-    color: var(--faded-blue);
+    color: ${(props) =>
+      props.theme === "dark" ? "var(--faded-blue)" : "var(--text-shadow-dark)"};
     text-shadow: 0 0 1px
       ${(props) =>
         props.theme === "light"
@@ -88,6 +91,7 @@ export const StyledCard = styled.div<StyledCardProps>`
   }
 
   @media only screen and (max-width: 900px) {
+    padding: 0;
     width: 50vw;
 
     && h1 {
@@ -99,12 +103,29 @@ export const StyledCard = styled.div<StyledCardProps>`
     }
   }
 
+  @media only screen and (max-width: 700px) {
+    width: 48vw;
+
+    && .stack {
+      gap: 7.5px;
+    }
+
+    && .stack > p {
+      font-size: 1.25rem;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
-    padding: none;
+    padding: 5px 10px;
+    height: ${(props) => (props.isLoaded ? "600px" : "0")};
 
     width: 100%;
     position: absolute;
     align-items: center;
+
+    && h1 {
+      margin-top: 20px;
+    }
 
     && .links {
       padding-left: 0;
@@ -117,6 +138,15 @@ export const StyledCard = styled.div<StyledCardProps>`
     }
 
     && .description {
+      font-size: 1.4rem;
+    }
+
+    && .stack {
+      width: 100%;
+      justify-content: center;
+    }
+
+    && .stack > p {
       font-size: 1.4rem;
     }
   }

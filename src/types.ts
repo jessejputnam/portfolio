@@ -12,11 +12,13 @@ export interface CardProps {
   side: string;
   data: CardData | null;
   currentSide: string;
+  isLoaded?: boolean;
 }
 
 export interface StyledCardProps {
   side: string;
   currentSide: string;
+  isLoaded?: boolean;
 }
 
 export interface CardData {

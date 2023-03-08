@@ -21,7 +21,7 @@ export const cards = [
     title: "Public Sector Landing Page",
     description:
       "A mock up of a public sector landing page. Written in vanilla JS, HTML, and CSS, the page is accessibility compliant (images with alt tags, all links can be tabbed to, buttons with accessible names, etc). It is fully responsive to all screen sizes, adjusting content dynamically. Uses some JS to allow interactive/animated menu, scroll to top, and search bar.",
-    stack: ["JavaScript", "HTML", "CSS"],
+    stack: ["JavaScript", "html", "css"],
     liveLink: "https://jessejputnam.github.io/pww-snippet/",
     codeLink: "https://github.com/jessejputnam/pww-snippet"
   },
@@ -39,7 +39,7 @@ export const cards = [
     title: "Weather or Not",
     description:
       "A weather API consumption app. Uses the OpenWeatherAPI to find local weather data. Three screens show you current conditions, hourly forecast, and daily forecast. A search bar also allows you to search for any city in the world by city. You can specify homonymous cities by including the country.",
-    stack: ["JavaScript", "CSS", "HTML"],
+    stack: ["JavaScript", "css", "html"],
     liveLink: "https://jessejputnam.github.io/weather-app/",
     codeLink: "https://github.com/jessejputnam/weather-app"
   },
@@ -57,7 +57,7 @@ export const cards = [
     title: "le Word",
     description:
       "A recreation of the popular word game, Wordle. Click on the digital keyboard to guess the secret 5 letter word. A wrong guess is shaded gray; a correct letter in the wrong place is shaded orange; and a correct letter in the correct place is shaded green. Select the gears to switch between light and dark themes.",
-    stack: ["JavaScript", "CSS", "HTML"],
+    stack: ["JavaScript", "css", "html"],
     liveLink: "https://jessejputnam.github.io/wordle-clone/",
     codeLink: "https://github.com/jessejputnam/wordle-clone"
   },
@@ -66,8 +66,13 @@ export const cards = [
     title: "Battleship",
     description:
       "A single player version of the classic boardgame, Battleship with computer opponent. Choose where to place your own ships, then begin and start clicking on the other board's squares. Misses are shaded gray and hits are shaded red.",
-    stack: ["JavaScript", "CSS", "HTML", "Jest", "Webpack"],
+    stack: ["JavaScript", "css", "html", "Jest", "Webpack"],
     liveLink: "https://jessejputnam.github.io/battleship/",
     codeLink: "https://github.com/jessejputnam/battleship"
+  },
+  {
+    id: 8,
+    title: "",
+    description: ""
   }
 ];

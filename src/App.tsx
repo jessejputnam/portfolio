@@ -18,8 +18,9 @@ function App() {
   const [theme, setTheme] = useState("dark");
   const [openModal, setOpenModal] = useState(false);
   const [frontData, setFrontData] = useState(cards[0]);
-  const [backData, setBackData] = useState(cards[1]);
+  const [backData, setBackData] = useState(cards[8]);
   const [currentSide, setCurrentSide] = useState("front");
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
   const toggleOpenModal = () => setOpenModal(!openModal);
@@ -35,6 +36,10 @@ function App() {
       setCurrentSide("front");
     }
   }
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
     <Context.Provider
@@ -57,11 +62,17 @@ function App() {
             <MobileNav getDetails={handleGetDetails} />
 
             <div>
-              <InfoCard side='back' currentSide={currentSide} data={backData} />
+              <InfoCard
+                side='back'
+                currentSide={currentSide}
+                data={backData}
+                isLoaded={isLoaded}
+              />
               <InfoCard
                 side='front'
                 currentSide={currentSide}
                 data={frontData}
+                isLoaded={isLoaded}
               />
             </div>
 

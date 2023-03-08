@@ -12,6 +12,10 @@ export const StyledAppWrapper = styled.div`
     height: 750px;
   }
 
+  @media only screen and (max-width: 700px) {
+    height: 800px;
+  }
+
   @media only screen and (max-width: 600px) {
     padding-top: 20px;
   }
