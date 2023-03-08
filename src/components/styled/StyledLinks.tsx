@@ -7,8 +7,11 @@ export const StyledLinks = styled.div`
   padding-bottom: 10px;
   margin-bottom: -12px;
 
-  border-bottom: ${(props) => (props.theme === "dark" ? "out" : "in")}set 3px
-    var(--background-light);
+  border-bottom: outset 3px
+    var(
+      ${(props) =>
+        props.theme === "light" ? "--transparent" : "--background-light"}
+    );
 
   @media only screen and (max-width: 600px) {
     border-bottom: ${(props) => (props.theme === "dark" ? "out" : "in")}set 3px

@@ -12,7 +12,8 @@ export const StyledMailForm = styled.div<{ open: boolean; theme: string }>`
   justify-content: center;
   z-index: 10;
   width: 350px;
-  height: ${(props) => (props.open ? "450px" : "0px")};
+  height: ${(props) => (props.open ? "450px" : "1px")};
+  opacity: ${(props) => (props.open ? "1" : "0")};
   box-shadow: ${(props) =>
     props.open
       ? "1px 2px 1px 0px var(--text-shadow-dark)"
@@ -21,15 +22,17 @@ export const StyledMailForm = styled.div<{ open: boolean; theme: string }>`
 
   position: absolute;
   right: 25px;
-  top: 147px;
+  top: 146px;
 
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
 
-  transition: height 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
+    opacity 0.4s ease-in-out;
+  transition-delay: 0s, 0s, ${(props) => (props.open ? "0s" : ".2s")};
 
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -129,6 +132,7 @@ export const StyledMailForm = styled.div<{ open: boolean; theme: string }>`
 
   && button {
     transition: filter 0.2s;
+    color: black;
     width: 100px;
     font-size: 1.2rem;
     font-weight: 600;

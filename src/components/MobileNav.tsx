@@ -20,7 +20,7 @@ export default function MobileNav({ getDetails }: NavProps) {
   }
 
   return (
-    <StyledMobileNav theme={theme}>
+    <StyledMobileNav theme={theme} open={open}>
       <div className='nav-select' onClick={toggleNav}>
         <h3 className='projects'>Projects</h3>
       </div>

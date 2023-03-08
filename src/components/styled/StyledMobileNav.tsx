@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMobileNav = styled.div`
+export const StyledMobileNav = styled.div<{ open: boolean }>`
   .nav-select {
     display: flex;
     justify-content: center;
@@ -28,7 +28,8 @@ export const StyledMobileNav = styled.div`
   }
 
   .nav-options {
-    height: 0;
+    height: 1px;
+    opacity: ${(props) => (props.open ? "1" : "0")};
 
     overflow-y: hidden;
     list-style: none;
@@ -36,10 +37,11 @@ export const StyledMobileNav = styled.div`
     z-index: 11;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 8px;
     width: 100%;
     padding-bottom: 0;
     padding-left: calc(50% - 90px);
+    padding-top: ${(props) => (props.open ? "15px" : "0px")};
     box-shadow: 0 0 3px 0 var(--text-shadow-dark);
 
     background-color: ${(props) =>
@@ -49,12 +51,13 @@ export const StyledMobileNav = styled.div`
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 
-    transition: height 0.5s ease-in-out, padding 0.7s;
+    transition: height 0.5s ease-in-out, padding 0.7s, opacity 0.4s ease-in-out;
+    transition-delay: 0s, 0s, ${(props) => (props.open ? "0s" : ".2s")};
   }
 
   .nav-options.open {
     padding-bottom: 15px;
-    height: 230px;
+    height: 275px;
   }
 
   p {
