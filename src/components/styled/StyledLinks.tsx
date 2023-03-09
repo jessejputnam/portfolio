@@ -8,18 +8,10 @@ export const StyledLinks = styled.div`
   margin-bottom: -12px;
 
   border-bottom: outset 3px
-    var(
-      ${(props) =>
-        props.theme === "light" ? "--transparent" : "--background-light"}
-    );
-
-  @media only screen and (max-width: 600px) {
-    border-bottom: ${(props) => (props.theme === "dark" ? "out" : "in")}set 3px
-      ${(props) =>
-        props.theme === "dark"
-          ? "var(--background-light)"
-          : "var(--text-shadow-dark)"};
-  }
+    ${(props) =>
+      props.theme === "dark"
+        ? "var(--background-light)"
+        : "var(--text-shadow-dark)"};
 
   && * {
     font-size: 2rem;

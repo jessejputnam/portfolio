@@ -14,15 +14,11 @@ export const StyledMailForm = styled.div<{ open: boolean; theme: string }>`
   width: 350px;
   height: ${(props) => (props.open ? "450px" : "1px")};
   opacity: ${(props) => (props.open ? "1" : "0")};
-  box-shadow: ${(props) =>
-    props.open
-      ? "1px 2px 1px 0px var(--text-shadow-dark)"
-      : "0 0 3px 1px var(--transparent)"};
   overflow-y: hidden;
 
   position: absolute;
   right: 25px;
-  top: 146px;
+  top: 147px;
 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -30,9 +26,8 @@ export const StyledMailForm = styled.div<{ open: boolean; theme: string }>`
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
 
-  transition: height 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
-    opacity 0.4s ease-in-out;
-  transition-delay: 0s, 0s, ${(props) => (props.open ? "0s" : ".2s")};
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition-delay: 0s, ${(props) => (props.open ? "0s" : ".2s")};
 
   @media only screen and (max-width: 600px) {
     width: 100%;
