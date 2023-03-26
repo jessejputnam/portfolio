@@ -28,8 +28,7 @@ export const StyledMobileNav = styled.div<{ open: boolean }>`
   }
 
   .nav-options {
-    height: 1px;
-    opacity: ${(props) => (props.open ? "1" : "0")};
+    height: 0px;
 
     overflow-y: hidden;
     list-style: none;
@@ -42,7 +41,6 @@ export const StyledMobileNav = styled.div<{ open: boolean }>`
     padding-bottom: 0;
     padding-left: calc(50% - 90px);
     padding-top: ${(props) => (props.open ? "15px" : "0px")};
-    box-shadow: 0 0 3px 0 var(--text-shadow-dark);
 
     background-color: ${(props) =>
       props.theme === "dark"
@@ -51,8 +49,7 @@ export const StyledMobileNav = styled.div<{ open: boolean }>`
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 
-    transition: height 0.5s ease-in-out, padding 0.7s, opacity 0.4s ease-in-out;
-    transition-delay: 0s, 0s, ${(props) => (props.open ? "0s" : ".2s")};
+    transition: height 0.5s ease-in-out, padding 0.7s;
   }
 
   .nav-options.open {
