@@ -3,7 +3,7 @@ export const cards = [
     id: 0,
     title: "Hello, there",
     description:
-      "I am a full stack web developer that loves exploring technology and building useful things. I used to teach high school students, and I also used to travel the US playing music. I've developed strong skills in communication, building teams, and working collaboratively to a common goal. I love learning new things and teaching others about them.",
+      "I am a full stack web developer that loves exploring technology and building useful things. I used to teach high school students, and I also used to travel the US playing music. I've developed strong skills in communication, building teams, and working collaboratively to a common goal. I love discovering new skills & technologies and teaching others about them.",
     liveLink: null,
     codeLink: null
   },
@@ -27,12 +27,12 @@ export const cards = [
   },
   {
     id: 3,
-    title: "Data Visualizer",
+    title: "In a Dash",
     description:
-      "This was a small project to begin exploring data visualization with D3.js. Given a set of data, I wanted to create a pop-up modal that showed the important information prominently, and display nested information in a graphical and aesthetic way.",
-    stack: ["React", "MaterialUI", "D3.js"],
-    liveLink: "https://jessejputnam.github.io/data-visualizer/",
-    codeLink: "https://github.com/jessejputnam/data-visualizer"
+      "A personalized daily news dashboard to quickly catch up on articles/videos/posts about personalized subjects. Before sign up, users can get the day's latest general articles, YouTube videos, and Reddit posts from APIs. On authentication with OAuth, users can customize their feed by subject to get a more personalized experience.",
+    stack: ["TypeScript", "React", "NextJS", "MySQL"],
+    liveLink: "https://in-a-dash.vercel.app/",
+    codeLink: "https://github.com/jessejputnam/in-a-dash"
   },
   {
     id: 4,
