@@ -39,7 +39,7 @@ export default function MobileNav({ getDetails }: NavProps) {
         </li>
 
         <li id='3' onClick={chooseCard} className='link'>
-          <p>[ Data Visualization ]</p>
+          <p>[ In a Dash ]</p>
         </li>
 
         <li id='4' onClick={chooseCard} className='link'>
