@@ -35,27 +35,27 @@ export default function MobileNav({ getDetails }: NavProps) {
         </li>
 
         <li id='2' onClick={chooseCard} className='link'>
-          <p>[ Gov. Landing Page ]</p>
+          <p>[ Nand2Tetris ]</p>
         </li>
 
         <li id='3' onClick={chooseCard} className='link'>
-          <p>[ In a Dash ]</p>
+          <p>[ leWord ]</p>
         </li>
 
         <li id='4' onClick={chooseCard} className='link'>
-          <p>[ Weather or Not ]</p>
+          <p>[ Gameboy Snake ]</p>
         </li>
 
         <li id='5' onClick={chooseCard} className='link'>
-          <p>[ Storefront Inventory ]</p>
+          <p>[ Battleship ]</p>
         </li>
 
         <li id='6' onClick={chooseCard} className='link'>
-          <p>[ le Word ]</p>
+          <p>[ Weather or Not ]</p>
         </li>
 
         <li id='7' onClick={chooseCard} className='link'>
-          <p>[ Battleship ]</p>
+          <p>[ Government Landing Page ]</p>
         </li>
       </ul>
     </StyledMobileNav>
