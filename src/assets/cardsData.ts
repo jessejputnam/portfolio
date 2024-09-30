@@ -21,7 +21,7 @@ export const cards = [
     title: "Nand2Tetris Progress",
     description:
       "My current progress in Nand2Tetris, a course that has you creating a modern computer starting with a simple NAND gate. The first part of the course is dedicated to building the hardware with a HDL from nand gates through adders, ALU, CPU, and memory, before connecting them. Then proceeding through writing an Assembler to translate Assembly to Machine Code. Then writing a VM Translator to Assembly. Current progress: writing the compiler for a Java-like OOP language into the VM language.",
-    stack: ["Python", "Assembly", "HDL"],
+    stack: ["Python", "VM Code", "Assembly", "HDL"],
     liveLink: "https://www.nand2tetris.org/",
     codeLink: "https://github.com/jessejputnam/nand2tetris"
   },
