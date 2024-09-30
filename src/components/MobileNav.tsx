@@ -55,7 +55,7 @@ export default function MobileNav({ getDetails }: NavProps) {
         </li>
 
         <li id='7' onClick={chooseCard} className='link'>
-          <p>[ Government Landing Page ]</p>
+          <p>[ Gov't Landing Page ]</p>
         </li>
       </ul>
     </StyledMobileNav>
