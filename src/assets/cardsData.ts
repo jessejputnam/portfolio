@@ -27,12 +27,12 @@ export const cards = [
   },
   {
     id: 3,
-    title: "In a Dash",
+    title: "Gameboy Snake",
     description:
-      "A personalized daily news dashboard to quickly catch up on articles/videos/posts about personalized subjects. Before sign up, users can get the day's latest general articles, YouTube videos, and Reddit posts from APIs. On authentication with OAuth, users can customize their feed by subject to get a more personalized experience.",
-    stack: ["TypeScript", "React", "NextJS", "MySQL"],
-    liveLink: "https://in-a-dash.vercel.app/",
-    codeLink: "https://github.com/jessejputnam/in-a-dash"
+      "Just a fun, quick remake of the classic, Snake. Nostalgically framed in a Gameboy from the backseat of your parents' car on the long drive toward vacation-land. Arrow keys to move. Return or A to select. Be warned: insane is not mislabeled.",
+    stack: ["JavaScript", "CSS", "HTML"],
+    liveLink: "https://jessejputnam.github.io/snake-gameboy/",
+    codeLink: "https://github.com/jessejputnam/snake-gameboy"
   },
   {
     id: 4,
@@ -45,12 +45,12 @@ export const cards = [
   },
   {
     id: 5,
-    title: "Storefront Inventory App",
+    title: "Nand2Tetris Progress",
     description:
-      "Full-stack mock inventory app / storefront website for a music store. You can add, update, read, and delete musical instruments to be listed on the store page. It was built using Node, Express, and MongoDB.",
-    stack: ["Node.js", "Express.js", "MongoDB", "Mongoose"],
-    liveLink: "https://string-theory-express.onrender.com/",
-    codeLink: "https://github.com/jessejputnam/string-theory-express"
+      "My current progress in Nand2Tetris, a course that has you creating a modern computer starting with a simple NAND gate. The first part of the course is dedicated to building the hardware with a HDL from nand gates through adders, ALU, CPU, and memory, before connecting them. Then proceeding through writing an Assembler to translate Assembly to Machine Code. Then writing a VM Translator to Assembly. Current progress: writing the compiler for a Java-like OOP language into the VM language.",
+    stack: ["Python", "Assembly", "HDL"],
+    liveLink: "https://www.nand2tetris.org/",
+    codeLink: "https://github.com/jessejputnam/nand2tetris"
   },
   {
     id: 6,
