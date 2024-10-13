@@ -20,7 +20,7 @@ export const cards = [
     id: 2,
     title: "Nand2Tetris Progress",
     description:
-      "My current progress in Nand2Tetris, a course that has you creating a modern computer starting with a simple NAND gate. The first part of the course is dedicated to building the hardware with a HDL from nand gates through adders, ALU, CPU, and memory, before connecting them. Then proceeding through writing an Assembler to translate Assembly to Machine Code. Following that, writing a VM Translator to Assembly. And further beyond that, writing a compiler for a Java-like OOP language for translating into the intermediary VM Language. Current progress: final step of writing the OS for the computer.",
+      "My current progress in Nand2Tetris, a course that has you creating a modern computer starting with a simple NAND gate. The first part of the course is dedicated to building the hardware with a HDL from nand gates through adders, ALU, CPU, and memory, before connecting them. Then writing an Assembler, VM Translater, and finally a Compiler for a Java-like OOP language for translating into the intermediary VM Language. Current progress: final step of writing the OS for the computer.",
     stack: ["Python", "VM Code", "Assembly", "HDL"],
     liveLink: "https://www.nand2tetris.org/",
     codeLink: "https://github.com/jessejputnam/nand2tetris"
